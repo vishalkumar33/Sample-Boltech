@@ -11,9 +11,33 @@ import Auth0
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupNavBar()
+    }
+    
+    func setupNavBar() {
+        navigationItem.title = "Welcome"
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.titleTextAttributes =
+        [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navBarAppearance.largeTitleTextAttributes =
+        [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navBarAppearance.backgroundColor = UIColor(displayP3Red: 47/255,
+                                                   green: 54/255, blue: 64/255, alpha: 1.0)
+        btnLogin.backgroundColor = UIColor(displayP3Red: 47/255,
+                                           green: 54/255, blue: 64/255, alpha: 1.0)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = .white
+        
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
 
     @IBAction func sdkAction(_ sender: Any) {

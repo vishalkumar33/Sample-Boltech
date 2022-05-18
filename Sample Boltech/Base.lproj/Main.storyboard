@@ -40,6 +40,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KNj-fY-ANI"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="FTP-gB-TX5" id="kQn-DC-UKH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,6 +133,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnLogout" destination="e7E-hV-1pw" id="1FT-HG-OK8"/>
+                        <outlet property="btnNavigate" destination="yBa-sp-mpT" id="wcJ-sh-Ugn"/>
                         <outlet property="lblEmail" destination="eSp-T1-UoC" id="Ohj-im-A7A"/>
                         <outlet property="lblName" destination="7Ei-8D-vhf" id="ZPH-Mr-UXg"/>
                     </connections>
